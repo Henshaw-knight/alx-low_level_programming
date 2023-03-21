@@ -9,19 +9,19 @@
  */
 int main(void)
 {
-	int i;
+	int c;
 
-	for (i = '0'; i <= '9'; i++)
+	for (c = '0'; c <= '9'; c++)
 	{
-		if (i != '9')
+		putchar(c);
+
+		if ( c != '9')
 		{
-			putchar(i);
-			putchar(', ');
-		}
-		else
-		{
-			putchar(i);
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
+
+	return (0);
 }
