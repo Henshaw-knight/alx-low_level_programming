@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: 'Program that prints the aplhabet in lowercase, then uppercase, followed by a new line'
+ * Description: 'Program that prints aplhabets in all uppercase,then new line'
  *
  * Return: 0 (Success)
  */
