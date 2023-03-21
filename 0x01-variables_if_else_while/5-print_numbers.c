@@ -14,7 +14,7 @@ int main(void)
 	for (i = 0; i <= 9; i++)
 	{
 		if (i != 9)
-			printf("%d ");
+			printf("%d ", i);
 		else
 			printf("%d\n", i);
 	}
