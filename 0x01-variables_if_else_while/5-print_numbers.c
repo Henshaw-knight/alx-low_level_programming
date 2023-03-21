@@ -13,7 +13,10 @@ int main(void)
 
 	for (i = 0; i <= 9; i++)
 	{
-		printf("%d\n", i);
+		if (i != 9)
+			printf("%d ");
+		else
+			printf("%d\n", i);
 	}
 
 	return (0);
