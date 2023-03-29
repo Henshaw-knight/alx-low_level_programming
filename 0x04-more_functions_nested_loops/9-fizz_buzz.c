@@ -2,8 +2,7 @@
 
 /**
  * main - Entry point for program that prints the numbers from 1 to 100
- * followed by a new line. Fizz is printed for multiples of 3, Buzz for
- * multiples of 5 and FizzBuzz for multiples of 3 and 5.
+ * followed by a new line.
  *
  * Return: 0 (Success)
  */
@@ -29,5 +28,5 @@ int main(void)
 	}
 	printf("\n");
 
-	return(0);
+	return (0);
 }
