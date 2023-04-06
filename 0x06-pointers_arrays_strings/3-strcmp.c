@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
  * _strcmp - function that compares two strings
@@ -12,10 +11,15 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	if (s1 < s2)
-		return (0 - rand());
-	else if (s1 > s2)
-		return (rand());
-	else
-		return (0);
+	int i = 0;
+
+	while (s1[i] != '\0')
+	{
+		if (s1[i] < s2[i])
+			return (s1[i] - s2[i]);
+		else if (s1 > s2)
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }
