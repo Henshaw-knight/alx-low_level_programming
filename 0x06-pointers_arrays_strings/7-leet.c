@@ -27,7 +27,6 @@ char *leet(char *str)
 					|| str[i] == char_ascii[j] + 32)
 			{
 				str[i] = encoded_val[j];
-				break;
 			}
 		}
 	}
