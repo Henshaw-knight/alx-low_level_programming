@@ -22,9 +22,10 @@ char *leet(char *str)
 {
 	int char_ascii[] = {65, 69, 79, 84, 76};
 	char encoded_val[] = {'4', '3', '0', '7', '1'};
-	int i, j;
+	int i = 0;
+	int j;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
 		for (j = 0; j < 5; j++)
 		{
@@ -32,7 +33,7 @@ char *leet(char *str)
 					|| str[i] == char_ascii[j] + 32)
 				str[i] = encoded_val[j];
 		}
-
+		i++;
 	}
 
 	return (str);
