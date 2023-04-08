@@ -21,19 +21,20 @@
 char *leet(char *str)
 {
 	int char_ascii[] = {65, 69, 79, 84, 76};
-	int encoded_val[] = {4, 3, 0, 7, 1};
-	int i = 0;
-	int j;
+	char encoded_val[] = {'4', '3', '0', '7', '1'};
+	int i, j;
 
-	while (str[i] != '\0')
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		for (j = 0; j < 5; j++)
 		{
 			if (str[i] == char_ascii[j]
 					|| str[i] == char_ascii[j] + 32)
+			{
 				str[i] = encoded_val[j];
+				break;
+			}
 		}
-		i++;
 	}
 
 	return (str);
