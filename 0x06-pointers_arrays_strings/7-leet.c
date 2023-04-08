@@ -9,11 +9,6 @@
  * Letters t and T would be replaced by 7
  * Letters l and L would be replaced by 1
  *
- * if statement can only be used once
- * Only two loops will be used
- * switch statement not allowed
- * no use of ternary operation
- *
  * @str: the string to encode
  *
  * Return: pointer to encoded string
