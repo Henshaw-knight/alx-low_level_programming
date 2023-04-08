@@ -30,9 +30,7 @@ char *leet(char *str)
 		{
 			if (str[i] == char_ascii[j]
 					|| str[i] == char_ascii[j] + 32)
-			{
 				str[i] = encoded_val[j];
-			}
 		}
 
 	}
