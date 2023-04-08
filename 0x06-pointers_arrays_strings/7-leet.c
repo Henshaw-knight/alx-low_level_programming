@@ -21,7 +21,7 @@
 char *leet(char *str)
 {
 	int char_ascii[] = {65, 69, 79, 84, 76};
-	char encoded_val[] = {'4', '3', '0', '7', '1'};
+	int encoded_val[] = {4, 3, 0, 7, 1};
 	int i = 0;
 	int j;
 
