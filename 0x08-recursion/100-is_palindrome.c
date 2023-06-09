@@ -62,13 +62,8 @@ int helper_f(char *s, int i, int length)
  */
 int get_length(char *s)
 {
-	int length = 0;
+	if (*s == '\0')
+		return (0);
 
-	while (*s)
-	{
-		length++;
-		s++;
-	}
-
-	return (length);
+	return (1 + get_length(s + 1));
 }
