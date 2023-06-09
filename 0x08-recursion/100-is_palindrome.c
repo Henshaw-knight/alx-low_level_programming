@@ -33,23 +33,15 @@ int is_palindrome(char *s)
  */
 int helper_f(char *s, int i, int length)
 {
-	if (*s == ' ')
-	{
-		s++;
-	}
-	if (*(s + length - i) == ' ')
-	{
-		i--;
-	}
 	if (*s == *(s + (length - i)))
 	{
 		i++;
-		return (1 * helper_f(s, i, length));
+		return (1 * helper_f(s + 1, i, length));
 	}
 	else
 	{
 		i++;
-		return (0 * helper_f(s, i, length));
+		return (0 * helper_f(s + 1, i, length));
 	}
 }
 
