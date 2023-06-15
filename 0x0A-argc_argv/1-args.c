@@ -3,8 +3,8 @@
 /**
  * main - function that prints the number of arguments passed into it
  *
- * @agrc: the number of arguments
- * @agrv: an array of pointers to the strings (argument)
+ * @argc: the number of arguments
+ * @argv: an array of pointers to the strings (argument)
  *
  * Return: Always 0 (Success)
  */
