@@ -1,1 +1,1 @@
-Folder for C - Preprocessor taskes
+Folder for C - Preprocessor tasks
