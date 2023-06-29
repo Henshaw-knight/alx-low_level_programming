@@ -4,19 +4,20 @@
 /**
  * free_dog - function that frees dogs
  *
- * @d: pointer the dog structure
+ * @d: pointer to the dog structure
  *
  * Return: void
  */
 void free_dog(dog_t *d)
 {
-	if (d == NULL)
-		return;
+	if (d != NULL)
+	{
+		if (d->name != NULL)
+			free(d->name);
+		if (d->owner != NULL)
+			free(d->owner);
 
-	if (d->name != NULL)
-		free(d->name);
-	if (d->owner != NULL)
-		free(d->owner);
-
-	free(d);
+		free(d);
+	}
+	return;
 }
