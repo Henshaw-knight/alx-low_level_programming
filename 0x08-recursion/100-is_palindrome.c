@@ -11,12 +11,12 @@ int is_palindrome(char *s)
 {
 	int length = get_length(s);
 
-	if (length == 0)
+	if (length <= 1)
 	{
 		return (1);
 	}
 	if (*s)
-		return (1 * helper_f(s, 1, length));
+		return (1 * helper_f(s, length));
 	else
 		return (1);
 }
@@ -26,22 +26,22 @@ int is_palindrome(char *s)
  * compares necessary characters to find if they are same or not
  *
  * @s: character of a string
- * @i: param used to get index of the character
  * @length: length of the string
  *
  * Return: 1 if characters are same, otherwise 0
  */
-int helper_f(char *s, int i, int length)
+int helper_f(char *s, int length)
 {
-	if (*s == *(s + (length - i)))
+	if (length <= 1)
+		return (1);
+
+	if (*s == *(s + (length - 1)))
 	{
-		i++;
-		return (1 * helper_f(s + 1, i, length));
+		return (1 * helper_f(s + 1, length - 2));
 	}
 	else
 	{
-		i++;
-		return (0 * helper_f(s + 1, i, length));
+		return (0);
 	}
 }
 
