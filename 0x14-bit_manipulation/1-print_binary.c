@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
  * print_binary - function that prints the binary representation of a num
@@ -9,23 +10,25 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned int flag = 0, biggest = 32768;
-
-	if (n == 0)
+	unsigned int i = 0;
+	int flag = 0;
+	unsigned long int largest = 1UL << ((sizeof(unsigned long int) * 8) - 1);
+	while (i < sizeof(unsigned long int * 8))
 	{
-		_putchar('0');
-		return;
-	}
-
-	while (biggest)
-	{
-		if ((n & biggest) == 0 && flag == 1)
-			_putchar('0');
-		else if ((n & biggest) != 0)
-		{
-			_putchar('1');
+		if ((largest & n) != 0)
 			flag = 1;
+
+		if (flag == 1)
+		{
+			if ((largest & n) == 0)
+				_putchar('0');
+			else
+				_putchar('1');
 		}
-		biggest = biggest >> 1;
+		largest = largest >> 1;
+		i++;
 	}
+	
+	if (flag == 0)
+		_putchar('0');
 }
