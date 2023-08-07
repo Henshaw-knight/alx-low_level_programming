@@ -29,7 +29,7 @@ void print_binary(unsigned long int n)
 		largest = largest >> 1;
 		i++;
 	}
-	
+
 	if (flag == 0)
 		_putchar('0');
 }
