@@ -33,7 +33,8 @@ int main(int argc, char *argv[])
 		r_file = read(file_from, buffer, 1024);
 		if (r_file == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]), exit(98);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
 		}
 		w_file = write(file_to, buffer, r_file);
 		if (w_file == -1)
@@ -41,7 +42,6 @@ int main(int argc, char *argv[])
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		}
 	} while (r_file == 1024);
-
 	if (close(file_from) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
