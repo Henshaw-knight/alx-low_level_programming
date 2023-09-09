@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 		w_file = write(file_to, buffer, r_file);
 		if (w_file == -1)
 		{
-			dprintf(STDERR_FILENO, "Erro: Can't write to %s\n", argv[2]), exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 		}
 	} while (r_file == 1024);
 
