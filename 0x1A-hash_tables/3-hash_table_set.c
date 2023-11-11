@@ -17,9 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
-	if (strlen(key) == 0)
-		return (0);
-	if (ht->size ==  0)
+	if (strlen(key) == 0 || ht->size == 0)
 		return (0);
 
 	new_node = malloc(sizeof(hash_node_t));
@@ -39,6 +37,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				free(temp->value);
 				temp->value = strdup(value);
+				free(new_node->key), free(new_node->value);
+				free(new_node);
 				return (1);
 			}
 			temp = temp->next;
